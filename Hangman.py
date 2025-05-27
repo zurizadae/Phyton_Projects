@@ -137,7 +137,10 @@ def main():
             print("Incorrect guess. Attempts left: " + str(attempts))
 
         if '_' not in guessedWORD:
-            print('\nCongratulations!! You guessed the word: ' + word)
+            print("\nCurrent word: ", ' '.join(guessedWORD)) # joins the strings in guessedWORD with a space
+            print(display_hangman())
+            print_used_letters(guessedWORD)
+            print('\nCongratulations!!! You guessed the word: ' + word)
             restart_game()
 
     else:
